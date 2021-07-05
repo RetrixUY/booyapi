@@ -1,0 +1,24 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["es2020"],
+    "module": "CommonJS",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "incremental": true,
+    "baseUrl": "./",
+    "rootDir": "./src",
+    "paths": {
+      "@root/*": ["./src/*"],
+    }
+  },
+  "include": [
+    "src/",
+  ]
+}

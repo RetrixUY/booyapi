@@ -1,0 +1,62 @@
+{
+  "name": "@pashoo2/typescript-npm-package-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate for a typescript library you want to publish as NPM package",
+  "main": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es/**/*"
+  ],
+  "engines" : { "node" : ">=10.4.0" },
+  "engineStrict": true,
+  "scripts": {
+    "test": "jest",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc --project ./tsconfig.build.json",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint",
+    "prepublishOnly": "npm run test",
+    "preversion": "npm run lint",
+    "version": "npm run fix && git add -A src",
+    "postversion": "git push && git push --tags",
+    "docs": "typedoc --out docs src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashoo2/typescript-npm-package-boilerplate.git"
+  },
+  "keywords": [
+    "npm",
+    "module",
+    "package",
+    "library",
+    "typescript",
+    "js",
+    "docs",
+    "boilerplate",
+    "publishing"
+  ],
+  "author": "Pavel Akulich akulich.pavel.stage@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pashoo2/typescript-npm-package-boilerplate/issues"
+  },
+  "homepage": "https://github.com/pashoo2/typescript-npm-package-boilerplate/#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.14.0",
+    "babel-jest": "^27.0.6",
+    "gts": "^3.1.0",
+    "jest": "^27.0.3",
+    "ts-jest": "27.0.2",
+    "typedoc": "^0.21.2",
+    "typedoc-plugin-markdown": "^3.10.2",
+    "typescript": "^4.3.5"
+  }
+}
