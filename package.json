@@ -7,10 +7,12 @@
   "files": [
     "es/**/*"
   ],
-  "engines" : { "node" : ">=10.4.0" },
+  "engines": {
+    "node": ">=10.4.0"
+  },
   "engineStrict": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc --project ./tsconfig.build.json",
@@ -45,7 +47,6 @@
     "url": "https://github.com/pashoo2/typescript-npm-package-boilerplate/issues"
   },
   "homepage": "https://github.com/pashoo2/typescript-npm-package-boilerplate/#readme",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
