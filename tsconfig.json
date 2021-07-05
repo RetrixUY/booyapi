@@ -2,7 +2,7 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "target": "ES5",
-    "lib": ["es2020"],
+    "lib": ["es2018", "DOM", "DOM.Iterable"],
     "module": "CommonJS",
     "allowJs": true,
     "esModuleInterop": true,
