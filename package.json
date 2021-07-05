@@ -1,6 +1,6 @@
 {
   "name": "@pashoo2/typescript-npm-package-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A boilerplate for a typescript library you want to publish as NPM package",
   "main": "es/index.js",
   "types": "es/index.d.ts",
