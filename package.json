@@ -12,7 +12,12 @@
   },
   "keywords": ["retrix","booyah"],
   "author": "RetrixUY",
-  "license": "GPL",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RetrixUY/booyah.js.git"
+  },
+  "homepage": "https://github.com/RetrixUY/booyah.js",
   "devDependencies": {
     "@types/humanize-duration": "^3.25.1",
     "@types/node": "^16.9.1",
