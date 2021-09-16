@@ -1,6 +1,6 @@
 ## BOOYAH.JS
 Usage:
-```
+```javascript
     import {ChatClient} from './ChatClient';
     const botId = 123456789;
     const channelId = 987654321;
