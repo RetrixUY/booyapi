@@ -137,7 +137,7 @@ function processChatMessage(message: socketMessage,channelId: string): ChatMessa
         text: message.data.msg,
         userIsModerator: message.data.badge_list.includes(BadgeCode.moderator),
         userIsOwner: message.data.badge_list.includes(BadgeCode.owner),
-        timestamp: Math.round(new Date().getTime()/1000)
+        timestamp: Math.round(new Date().getTime())
     }
     return msg;
 }
@@ -153,7 +153,7 @@ function processModAction(message: socketModAction,channelId: string, channelNam
         channelId: channelId,
         channelName: channelName,
         actionType: actionType,
-        timestamp: Math.round(new Date().getTime()/1000)
+        timestamp: Math.round(new Date().getTime())
     }
     return action;
 }
