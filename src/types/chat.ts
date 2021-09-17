@@ -1,11 +1,11 @@
 
 export type ChatMessage = {
-    clientId: string,
-    serverId: string,
+    messageId: string,
+    messageText: string,
     channelId: string,
+    channelName: string,
     userId: string,
     userNickname: string,
-    text: string,
     userIsOwner: boolean,
     userIsModerator: boolean,
     timestamp: number
@@ -29,15 +29,14 @@ export enum ModActionType {
   TIMEOUT='TIMEOUT'
 }
 export type ModAction = {
-  serverId: string,
-  clientId: string,
+  actionId: string,
+  actionType: ModActionType,
   userId: string,
   userNickname: string,
   modNickname: string,
-  duration?: string,
+  duration?: number,
   channelId: string,
   channelName: string,
-  actionType: ModActionType,
   timestamp: number
 }
 export type HotWord = {

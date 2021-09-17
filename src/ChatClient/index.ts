@@ -67,7 +67,7 @@ export class ChatClient extends EventEmitter {
             messages.forEach(async (message: any) => {
                 switch (message.event) {
                     case MsgType.CHAT:
-                        this.emit('message', processChatMessage(message,this.channelId.toString()));
+                        this.emit('message', processChatMessage(message,this.channelId.toString(),this.channelName));
                         break;
                     case MsgType.BAN_USER:
                         this.emit('modAction', processModAction(message,this.channelId.toString(),this.channelName,ModActionType.BAN))
@@ -127,14 +127,14 @@ type socketModAction = {
     event: number
 }
 
-function processChatMessage(message: socketMessage,channelId: string): ChatMessage{
+function processChatMessage(message: socketMessage,channelId: string,channelName:string): ChatMessage{
     const msg: ChatMessage = {
-        clientId: message.data.clt_msg_id,
-        serverId: message.data.srv_msg_id,
+        messageId: message.data.srv_msg_id,
+        messageText: message.data.msg,
         channelId: channelId,
+        channelName: channelName,
         userId: message.data.uid,
         userNickname: message.data.nickname,
-        text: message.data.msg,
         userIsModerator: message.data.badge_list.includes(BadgeCode.moderator),
         userIsOwner: message.data.badge_list.includes(BadgeCode.owner),
         timestamp: Math.round(new Date().getTime())
@@ -144,12 +144,11 @@ function processChatMessage(message: socketMessage,channelId: string): ChatMessa
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function processModAction(message: socketModAction,channelId: string, channelName: string,actionType: ModActionType):ModAction {
     const action: ModAction = {
-        clientId: message.data.clt_msg_id,
-        serverId: message.data.srv_msg_id,
+        actionId: message.data.srv_msg_id,
         userId: message.data.uid,
         userNickname: message.data.msg_param.nickname,
         modNickname: message.data.msg_param.mod_nickname,
-        duration: message.data.msg_param.duration,
+        duration: (message.data.msg_param.duration) ? parseInt(message.data.msg_param.duration) : undefined,
         channelId: channelId,
         channelName: channelName,
         actionType: actionType,
