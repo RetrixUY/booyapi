@@ -9,7 +9,7 @@ npm install booyapi
 ```
 
 ```javascript
-    import {ChatClient} from 'booyapi';
+    import {ChatClient, RestAPI} from 'booyapi';
     const botId = 123456789; //ID OF THE BOT ACCOUNT (extract from bot profile url, example: https://booyah.live/studio/123456789)
     const channelId = 987654321; //ID OF THE TARGET CHANNEL (extract from channel url, example: https://booyah.live/channels/123456789)
     const sessionKey = "INSERT_SESSION_KEY"; //BOOYAH SESSION KEY (login to the bot account and extract from the browser cookies)
@@ -18,6 +18,11 @@ npm install booyapi
     chatClient.on('message',async (chatMessage)=>{
         if(chatMessage.text == "!ping"){
             chatClient.sendMessage("Pong!")
+        }
+        else if (chatMessage.text == "!followers"){
+            RestAPI.channels.getItem(channelId,sessionKey).then(
+                (channel) => chatClient.sendMessage(`this channel has ${channel.user.followerCount} followers.`),
+            ).catch((error: any)=> console.log("Unable to obtain followers",error));
         }
     });
 
