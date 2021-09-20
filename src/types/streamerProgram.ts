@@ -28,7 +28,7 @@ export const defaultStreamerProgramStats: StreamerProgramStats = {
   monthStartTs: 0,
   streamAcu: 0,
   streamDay: 0,
-  streamHour: 0
+  streamHour: 0,
 };
 
 export interface StreamerEntryLevel {
@@ -60,22 +60,22 @@ export interface StreamerProgramPayout {
 
 export enum StreamerProgramRecordOffset {
   CURRENT_MONTH = 0,
-  PREVIOUS_MONTH = 1
+  PREVIOUS_MONTH = 1,
 }
 
 export enum StreamerProgramPayoutWithdrawStatus {
   PENDING = 0,
   PROCESSING = 1,
   REJECTED = 2,
-  APPROVED = 3
+  APPROVED = 3,
 }
 
 export enum StreamerProgramWithdrawType {
   COIN = 1,
-  DIAMOND = 2
+  DIAMOND = 2,
 }
 
 export enum StreamerProgramPayoutStatus {
   PENDING = 0,
-  ALREADY_WITHDRAW = 1
+  ALREADY_WITHDRAW = 1,
 }

@@ -1,19 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import v3 from "../v3";
-import { PlaybackItem } from '../../types/playback';
+import v3 from '../v3';
+import {PlaybackItem} from '../../types/playback';
 //import { Profile } from '../../types/profile';
-import { SearchType } from '../../types/search';
+import {SearchType} from '../../types/search';
 
 export default {
   getRecommendedTerms(
-    lang: string,sessionKey: string,
+    lang: string,
+    sessionKey: string,
     count?: number
-  ): Promise<{ termList: string[] }> {
-    return v3('get', 'searches/recommended-terms', { lang, count },sessionKey);
+  ): Promise<{termList: string[]}> {
+    return v3('get', 'searches/recommended-terms', {lang, count}, sessionKey);
   },
   getSearches(
     lang: string,
-    term: string,sessionKey: string,
+    term: string,
+    sessionKey: string,
     type?: SearchType,
     cursor?: number,
     count?: number
@@ -31,12 +33,17 @@ export default {
       resItemList: PlaybackItem[];
     };
   }> {
-    return v3('get', 'searches/searches', {
-      lang,
-      term,
-      type,
-      cursor,
-      count
-    },sessionKey);
-  }
+    return v3(
+      'get',
+      'searches/searches',
+      {
+        lang,
+        term,
+        type,
+        cursor,
+        count,
+      },
+      sessionKey
+    );
+  },
 };

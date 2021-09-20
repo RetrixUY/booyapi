@@ -1,4 +1,4 @@
-import { User } from './user';
+import {User} from './user';
 
 export type FFLuckyDrawItem = {
   amount: number;
@@ -30,7 +30,7 @@ export type RewardsMap = {
 
 export enum FFLuckyDrawMode {
   INSTANT = 0,
-  COUNTDOWN = 1
+  COUNTDOWN = 1,
 }
 
 export enum FFLuckyDrawCriteriaType {
@@ -54,7 +54,7 @@ export enum FFLuckyDrawCriteriaType {
   PT24 = 128, // period time 24 hours
   PT3 = 256, // period time 3 days
   PT10 = 512,
-  PT30 = 1024
+  PT30 = 1024,
 }
 
 export type FFLuckyDrawCriteriaSelectType = {
@@ -88,5 +88,5 @@ export enum FFLuckyDrawStatus {
   ONGOING = 1,
   CANCELMANUALLY = 2,
   MANUALAUTOMATICALLY = 3,
-  EXCEPTION = 4
+  EXCEPTION = 4,
 }

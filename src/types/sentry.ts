@@ -6,5 +6,5 @@ export enum SentryDeviceDSN {
   STANDALONE_GAME = 'https://4d2c022df08f4525963d23ac3f17c78d@c-api-sentry3.sto.shopee.io/56',
   STANDALONE_LIVEPLAYER = 'https://afa1713e7b9b48e7840ec58abf158b17@c-api-sentry3.sto.shopee.io/57',
   STANDALONE_CHATROOM = 'https://899164731ca7484eb74ed2ba8407d50e@c-api-sentry3.sto.shopee.io/59',
-  STANDALONE_PLAYBACK = 'https://8cafebfd0df4413e98b0258ceed20bfb@c-api-sentry3.sto.shopee.io/71'
+  STANDALONE_PLAYBACK = 'https://8cafebfd0df4413e98b0258ceed20bfb@c-api-sentry3.sto.shopee.io/71',
 }

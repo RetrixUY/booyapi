@@ -1,10 +1,10 @@
-import { User } from './user';
-import { Channel } from './channel';
+import {User} from './user';
+import {Channel} from './channel';
 
 export enum RankingTimeScope {
   day = 0,
   week = 1,
-  month = 2
+  month = 2,
 }
 
 export enum RankingListKey {
@@ -12,7 +12,7 @@ export enum RankingListKey {
   RISING_STAR = 'exclSgdWatchedTimeRankingList',
   MOST_POPULAR = 'popularityRankingList',
   COMMUNITY_DARLINGS = 'exclSgdPopularityRankingList',
-  SWAG_KINGS = 'contributionRankingList'
+  SWAG_KINGS = 'contributionRankingList',
 }
 
 export type RankingUserProfile = {
@@ -50,7 +50,7 @@ export type RankingCard = {
 export const defaultRankingsList = {
   [RankingTimeScope.day]: [],
   [RankingTimeScope.week]: [],
-  [RankingTimeScope.month]: []
+  [RankingTimeScope.month]: [],
 };
 
 export const defaultRankingCards: RankingCard[] = [
@@ -60,7 +60,7 @@ export const defaultRankingCards: RankingCard[] = [
     timeScope: RankingTimeScope.week,
     bannerTheme: 'yellow',
     name: 'label_ranking_most_watched',
-    showScore: false
+    showScore: false,
   },
   {
     id: 'rising-stars',
@@ -68,7 +68,7 @@ export const defaultRankingCards: RankingCard[] = [
     timeScope: RankingTimeScope.week,
     bannerTheme: 'blue',
     name: 'label_ranking_rising_stars',
-    showScore: false
+    showScore: false,
   },
   {
     id: 'most-popular',
@@ -76,7 +76,7 @@ export const defaultRankingCards: RankingCard[] = [
     timeScope: RankingTimeScope.week,
     bannerTheme: 'purple',
     name: 'label_ranking_most_popular',
-    showScore: true
+    showScore: true,
   },
   {
     id: 'community-darlings',
@@ -84,7 +84,7 @@ export const defaultRankingCards: RankingCard[] = [
     timeScope: RankingTimeScope.week,
     bannerTheme: 'green',
     name: 'label_ranking_community_darlings',
-    showScore: true
+    showScore: true,
   },
   {
     id: 'swag-kings',
@@ -92,6 +92,6 @@ export const defaultRankingCards: RankingCard[] = [
     timeScope: RankingTimeScope.week,
     bannerTheme: 'red',
     name: 'label_ranking_swag_kings',
-    showScore: true
-  }
+    showScore: true,
+  },
 ];

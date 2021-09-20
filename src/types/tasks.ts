@@ -1,13 +1,13 @@
 export enum DailyTaskStatus {
   PROGRESS = 0,
   FINISHED = 1,
-  CLAIMED = 2
+  CLAIMED = 2,
 }
 
 export enum DailyTaskReward {
   BOOYAH_TICKET = 0,
   BOOYAH_COIN = 1,
-  FFGIFT = 2
+  FFGIFT = 2,
 }
 
 export enum DailyTaskType {
@@ -18,7 +18,7 @@ export enum DailyTaskType {
   SHARE_STREAM = 4,
   WATCH_CLIPS = 5,
   LIKE_CLIPS = 6,
-  UPLOAD_CLIPS = 7
+  UPLOAD_CLIPS = 7,
 }
 
 export interface DailyTask {
@@ -41,43 +41,43 @@ export const defaultDailyTask: DailyTask = {
   rewardAmount: 0,
   rewardType: 0,
   status: 0,
-  taskType: 0
+  taskType: 0,
 };
 
 export enum TLEStatus {
   PROGRESS = 0,
   FINISHED = 1,
-  CLAIMED = 2
+  CLAIMED = 2,
 }
 
 export enum TLEPrizeType {
   PRIZE = 1,
-  CONSOLATION = 2
+  CONSOLATION = 2,
 }
 
 export enum TLERewardType {
   BOOYAH_TICKET = 0,
-  FREEFIRE_ITEM = 1
+  FREEFIRE_ITEM = 1,
 }
 
 export enum TLEQueryType {
   COMPLETED = 0,
-  ALL = 1
+  ALL = 1,
 }
 
 export enum TLEClaimQueryType {
   CLAIM = 0,
-  GIVE_UP = 1
+  GIVE_UP = 1,
 }
 
 export enum TLEEventType {
   CLAIM_BOOYAH_TICKET = 1,
   WATCH_STREAM = 2,
-  WATCH_CLIP = 3
+  WATCH_CLIP = 3,
 }
 export enum TLEEventScope {
   ALL_PLATFORM = 0,
-  SPECIFIC_CHANNEL = 1
+  SPECIFIC_CHANNEL = 1,
 }
 
 export interface TimeLimitedTask {
@@ -123,10 +123,10 @@ export const defaultTimeLimitedTask: TimeLimitedTask = {
   rewardFfItem: {
     iconUrl: '',
     itemName: '',
-    itemUniq: ''
+    itemUniq: '',
   },
   rewardType: TLERewardType.BOOYAH_TICKET,
   userStatus: TLEStatus.PROGRESS,
   detail: '',
-  eventId: 0
+  eventId: 0,
 };

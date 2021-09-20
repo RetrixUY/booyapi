@@ -1,4 +1,4 @@
-import { SessionPlatform } from './platform';
+import {SessionPlatform} from './platform';
 
 export interface Game {
   gameBuildId: number; // primary key
@@ -25,7 +25,7 @@ export enum GameIds {
   OTHERS = 0,
   FREE_FIRE = 1,
   ARENA_OF_VALOR = 5,
-  IRL = 100000
+  IRL = 100000,
 }
 
 export interface GameFollowingList {

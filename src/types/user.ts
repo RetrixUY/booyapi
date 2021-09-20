@@ -1,4 +1,4 @@
-import { LoginPlatform, StreamingPlatform } from './platform';
+import {LoginPlatform, StreamingPlatform} from './platform';
 
 export type User = {
   uid: number;
@@ -43,7 +43,7 @@ export enum BanningSource {
   PornDetectionEmail = 1,
   UserReport = 2,
   ManualChecking = 3,
-  IpTakedownEmail = 4
+  IpTakedownEmail = 4,
 }
 
 export enum ModerateContent {
@@ -51,7 +51,7 @@ export enum ModerateContent {
   DeleteAllHighlights = 1,
   DeleteAllClips = 2,
   DeleteAllUploadedVideos = 3,
-  ResetUserInfo = 4
+  ResetUserInfo = 4,
 }
 
 export type BlockedUser = {
@@ -65,6 +65,5 @@ export enum UserGender {
   Male = 1,
   Female = 2,
   Others = 3,
-  KeepSecret = 4
+  KeepSecret = 4,
 }
-

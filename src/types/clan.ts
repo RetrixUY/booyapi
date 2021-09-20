@@ -1,16 +1,16 @@
-import { GroupTier, ProgramLevel } from './streamProgram';
-import { Channel } from './channel';
-import { User } from './user';
-import { Stream } from './stream';
+import {GroupTier, ProgramLevel} from './streamProgram';
+import {Channel} from './channel';
+import {User} from './user';
+import {Stream} from './stream';
 
 export enum ClanApplicationReview {
   REJECT = 0,
-  ACCEPT = 1
+  ACCEPT = 1,
 }
 
 export enum ClanStatsSort {
   HOURS_WATCHED = 0,
-  HOURS_STREAMED = 1
+  HOURS_STREAMED = 1,
 }
 
 // value here are random
@@ -20,20 +20,20 @@ export enum ClanStatsFilter {
   CURRENT_WEEK = 10,
   LAST_WEEK = 11,
   CURRENT_MONTH = 20,
-  LAST_MONTH = 21
+  LAST_MONTH = 21,
 }
 
 export enum ClanStatsType {
   DAY = 1,
   WEEK = 2,
-  MONTH = 3
+  MONTH = 3,
 }
 
 export enum ClanApplicationStatus {
   NOT_APPLYING = 0,
   PENDING = 1,
   APPROVED = 2,
-  REJECTED = 3
+  REJECTED = 3,
 }
 
 export type Clan = {
@@ -118,9 +118,9 @@ export const defaultClan = {
     logoUrl: '',
     pcBannerUrl: '',
     mobileBannerUrl: '',
-    colorCode: ''
+    colorCode: '',
   },
   socialLinkList: [],
   memberList: [],
-  adminList: []
+  adminList: [],
 };

@@ -2,7 +2,7 @@
 export enum VideoType {
   VOD = 'vod',
   CLIP = 'clip',
-  HIGHLIGHT = 'hightlight'
+  HIGHLIGHT = 'hightlight',
 }
 
 // video type from server side
@@ -16,12 +16,12 @@ export enum VideoFilterType {
   // combination values
   HIGHLIGHT_AND_DEMO = VideoFilterType.HIGHLIGHT |
     VideoFilterType.HIGHLIGHT_DEMO, // 10
-  VOD_AND_VIDEO = VideoFilterType.VOD | VideoFilterType.VIDEO // 17
+  VOD_AND_VIDEO = VideoFilterType.VOD | VideoFilterType.VIDEO, // 17
 }
 
 export enum VideoFormat {
   MP4 = 'video/mp4',
-  HLS = 'application/x-mpegURL'
+  HLS = 'application/x-mpegURL',
 }
 
 export interface VideoTab {

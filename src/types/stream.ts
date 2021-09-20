@@ -1,7 +1,7 @@
-import { Resolution, Mirror } from './videoPlayer';
-import { User } from './user';
-import { Channel } from './channel';
-import { FFLuckyDrawRoundInfo } from './luckyDraw';
+import {Resolution, Mirror} from './videoPlayer';
+import {User} from './user';
+import {Channel} from './channel';
+import {FFLuckyDrawRoundInfo} from './luckyDraw';
 
 export interface Stream {
   gameBuildId: number;
@@ -25,7 +25,7 @@ export const defaultStream = {
   mirrorList: [],
   defaultMirror: '',
   viewerCount: 0,
-  viewerCountInfo: []
+  viewerCountInfo: [],
 };
 
 export interface StreamItem {
@@ -59,8 +59,8 @@ export const defaultLuckyDrawInfo = {
     mode: 0,
     quantity: 0,
     roundId: 0,
-    winnerAmount: 0
-  }
+    winnerAmount: 0,
+  },
 };
 
 export type ViewerCount = {
@@ -100,7 +100,7 @@ export type FBTarget = {
 
 export enum FBPrivacy {
   MY_WALL = 0,
-  ONLY_ME = 1
+  ONLY_ME = 1,
 }
 
 export type FBRestream = {
@@ -134,5 +134,5 @@ export const defaultStreamSettings = {
   streamStartMsg: '',
   tagUniq: '',
   thumbnail: '',
-  thumbnailPath: ''
+  thumbnailPath: '',
 };

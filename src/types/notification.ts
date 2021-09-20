@@ -6,8 +6,7 @@
   3. extra, the extra data returned along with "GET /users/{uid}/push-messages" api, re-organized by frontend according to the needs of each type.
 */
 
-
-import { VideoFilterType } from './video';
+import {VideoFilterType} from './video';
 
 // https://confluence.garenanow.com/pages/viewpage.action?pageId=83003370
 export enum NotificationType {
@@ -32,7 +31,7 @@ export enum NotificationType {
   RewardExpiring = 805,
   CashCoin = 806,
   ClanApplicationApproved = 901,
-  ClanApplicationRejected = 902
+  ClanApplicationRejected = 902,
 }
 
 // https://confluence.garenanow.com/pages/viewpage.action?pageId=83003370

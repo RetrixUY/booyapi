@@ -7,5 +7,5 @@ export enum StorageNamespace {
   withdraw = 'Web/Withdraw',
   clipThumbnail = 'playback/Clip', // backend requires "playback/Clip"
   streamThumbnail = 'Channel/Thumbnail', // backend requires "Channel/"
-  chatAlert = 'Web/ChatAlert'
+  chatAlert = 'Web/ChatAlert',
 }

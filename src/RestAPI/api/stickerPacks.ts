@@ -1,10 +1,11 @@
-import v3 from "../v3";
+import v3 from '../v3';
 
 export default {
   get(
     updateTime: number,
     cursor: number,
-    count: number,sessionKey: string
+    count: number,
+    sessionKey: string
   ): Promise<{
     cursor: number;
     stickerPackList: {
@@ -22,11 +23,16 @@ export default {
       }[];
     }[];
   }> {
-    return v3('get', 'sticker-packs', {
-      lang: undefined,
-      updateTime,
-      cursor,
-      count
-    },sessionKey);
-  }
+    return v3(
+      'get',
+      'sticker-packs',
+      {
+        lang: undefined,
+        updateTime,
+        cursor,
+        count,
+      },
+      sessionKey
+    );
+  },
 };

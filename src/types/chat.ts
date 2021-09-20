@@ -1,15 +1,14 @@
-
 export type ChatMessage = {
-    messageId: string,
-    messageText: string,
-    channelId: string,
-    channelName: string,
-    userId: string,
-    userNickname: string,
-    userIsOwner: boolean,
-    userIsModerator: boolean,
-    timestamp: number
-}
+  messageId: string;
+  messageText: string;
+  channelId: string;
+  channelName: string;
+  userId: string;
+  userNickname: string;
+  userIsOwner: boolean;
+  userIsModerator: boolean;
+  timestamp: number;
+};
 
 export type Chatroom = {
   msgMode: Restriction;
@@ -24,21 +23,21 @@ export type BlockedPhrase = {
 };
 
 export enum ModActionType {
-  BAN='BAN',
-  UNBAN='UNBAN',
-  TIMEOUT='TIMEOUT'
+  BAN = 'BAN',
+  UNBAN = 'UNBAN',
+  TIMEOUT = 'TIMEOUT',
 }
 export type ModAction = {
-  actionId: string,
-  actionType: ModActionType,
-  userId: string,
-  userNickname: string,
-  modNickname: string,
-  duration?: number,
-  channelId: string,
-  channelName: string,
-  timestamp: number
-}
+  actionId: string;
+  actionType: ModActionType;
+  userId: string;
+  userNickname: string;
+  modNickname: string;
+  duration?: number;
+  channelId: string;
+  channelName: string;
+  timestamp: number;
+};
 export type HotWord = {
   id: number;
   phrase: string;
@@ -61,7 +60,7 @@ export enum BadgeCode {
   gifterTop1 = 401,
   gifterTop2 = 402,
   gifterTop3 = 403,
-  gifterOthers = 404
+  gifterOthers = 404,
 }
 
 export enum MsgType {
@@ -101,18 +100,18 @@ export enum MsgType {
   LUCKY_DRAW_FINISH = 33,
   ALERT_CUSTOM_CONFIG_MODIFY = 34,
   ALERT_CUSTOM_CONFIG_TEST = 35,
-  STICKER_BLOCK_CHANGED = 36
+  STICKER_BLOCK_CHANGED = 36,
 }
 
 export enum SendMsgType {
   CHAT = 0,
-  STICKER = 1
+  STICKER = 1,
 }
 
 export enum Restriction {
   off = 0,
   followerOnly = 1,
-  gifterOnly = 2
+  gifterOnly = 2,
 }
 
 export enum SlowMode {
@@ -124,14 +123,14 @@ export enum SlowMode {
   s60 = 60, // 1 msg per 60s
   s120 = 120, // 1 msg per 120s
   s300 = 300, // 1 msg per 300s
-  s600 = 600 // 1 msg per 600s
+  s600 = 600, // 1 msg per 600s
 }
 
 export enum HiddenBanner {
   all = 0,
   freeGift = 1,
   coinGift = 2,
-  lootdrop = 3
+  lootdrop = 3,
 }
 
 export enum ShownSystemMessage {
@@ -140,14 +139,13 @@ export enum ShownSystemMessage {
   coinGift = 2,
   hosting = 3,
   lootdropWinner = 4,
-  chatModeration = 5
+  chatModeration = 5,
 }
 
 export enum DashboardMsgType {
   chatMessage = 0,
-  systemMessage = 1
+  systemMessage = 1,
 }
-
 
 export type SystemChatSettings = {
   [key: string]: boolean;
@@ -159,5 +157,5 @@ export const defaultSystemChatSettings = {
   [ShownSystemMessage.coinGift]: true,
   [ShownSystemMessage.freeGift]: true,
   [ShownSystemMessage.hosting]: true,
-  [ShownSystemMessage.lootdropWinner]: true
+  [ShownSystemMessage.lootdropWinner]: true,
 };

@@ -19,9 +19,6 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run lint",
-    "prepublishOnly": "npm run test",
-    "preversion": "npm run lint",
     "version": "npm run fix && git add -A src",
     "postversion": "git push && git push --tags",
     "docs": "typedoc --out docs src/index.ts"

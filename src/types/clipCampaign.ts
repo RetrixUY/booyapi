@@ -1,8 +1,8 @@
-import { PlaybackItem } from './playback';
+import {PlaybackItem} from './playback';
 
 export enum ClipSort {
   Hot = 0,
-  Latest = 1
+  Latest = 1,
 }
 
 export type Reward = {
@@ -15,7 +15,7 @@ export type Reward = {
 export enum ClipCampaignRewardType {
   BOOYAH_TICKET = 0,
   FREEFIRE_GIFT = 2,
-  CASH_COIN = 3
+  CASH_COIN = 3,
 }
 
 export type RankReward = {
@@ -27,7 +27,7 @@ export enum Status {
   disabled = 0,
   enabled = 1,
   ended = 2,
-  reviewed = 3
+  reviewed = 3,
 }
 
 export type ClipCampaign = {
@@ -67,7 +67,7 @@ export const defaultClipCampaign: ClipCampaign = {
   topEntryList: [],
   totalLikeCount: 0,
   totalViewCount: 0,
-  updateTime: 0
+  updateTime: 0,
 };
 
 export type ActiveClipCampaign = {

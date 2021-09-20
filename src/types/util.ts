@@ -34,7 +34,7 @@ export type ServerConfig = {
         sampleRateEmbedPlayer: number;
       };
     };
-    lootdropConfigs: { gameId: number; loginUrl: string }[];
+    lootdropConfigs: {gameId: number; loginUrl: string}[];
     assessmentRequestIntervalSec: number;
   };
   regional: {
@@ -55,11 +55,11 @@ export const defaultServerConfig: ServerConfig = {
     mux: {
       web: {
         sampleRateDefault: 0,
-        sampleRateEmbedPlayer: 0
-      }
+        sampleRateEmbedPlayer: 0,
+      },
     },
     lootdropConfigs: [],
-    assessmentRequestIntervalSec: 5
+    assessmentRequestIntervalSec: 5,
   },
   regional: {
     region: '',
@@ -68,9 +68,9 @@ export const defaultServerConfig: ServerConfig = {
     clanContactEmail: '',
     help: {
       url: '',
-      type: ''
-    }
-  }
+      type: '',
+    },
+  },
 };
 
 export enum FileType {
@@ -79,7 +79,7 @@ export enum FileType {
   png = 'image/png',
   webp = 'image/webp',
   gif = 'image/gif',
-  image = 'image/*'
+  image = 'image/*',
 }
 
 // https://confluence.garenanow.com/display/MAMBET/MTV+Server+Error+Code
@@ -136,12 +136,12 @@ export enum ApiErrorCode {
   TooManyRequests = 429,
 
   // 500
-  ServerError = 500
+  ServerError = 500,
 }
 
 export enum FFBindingResult {
   success = 'success',
   error = 'error',
   duplicated = 'duplicate',
-  cooldown = 'cooldown'
+  cooldown = 'cooldown',
 }

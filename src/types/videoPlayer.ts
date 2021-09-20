@@ -41,7 +41,7 @@ export enum PlayerError {
   MANIFEST_NOT_FOUND = '0007',
   FRAG_NOT_FOUND = '0008',
   LEVEL_NOT_FOUND = '0009',
-  UNKNOWN = '0010'
+  UNKNOWN = '0010',
 }
 
 export type ControllerMode = 'full' | 'mini';

@@ -2,7 +2,7 @@ export enum SearchType {
   general = 0,
   channel = 1,
   clip = 2,
-  highlight = 3
+  highlight = 3,
 }
 
 export interface SearchTab {

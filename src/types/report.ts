@@ -3,11 +3,11 @@ export enum Reason {
   Violent = 1,
   HatefulOrAbusiveContent = 2,
   SpamOrMisleading = 3,
-  InfringesMyRights = 4
+  InfringesMyRights = 4,
 }
 
 export enum Type {
   Clip = 0,
   Channel = 1,
-  Chat = 2
+  Chat = 2,
 }

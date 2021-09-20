@@ -20,7 +20,7 @@ export enum NewsTag {
   NEWS = 'NEWS',
   ENGINEERING = 'ENGINEERING',
   ANNOUNCEMENTS = 'ANNOUNCEMENTS',
-  FREE_FIRE = 'FREE_FIRE'
+  FREE_FIRE = 'FREE_FIRE',
 }
 
 export type NewsTagValue = NewsTag | null;

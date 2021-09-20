@@ -1,6 +1,5 @@
-import v3 from "../v3";
-import { AxiosResponse } from 'axios';
-
+import v3 from '../v3';
+import {AxiosResponse} from 'axios';
 
 // Store the sessionHeader in memory, as a fallback of cookie session_key.
 // The reason is that we encounter some cases where cookie isn't available.
@@ -15,37 +14,44 @@ export default {
       gopToken: string,
       language: string, // UI language,
       sessionKey: string
-    ): Promise<{ uid: number }> {
-      return v3('post', 'auths/login', {
-        deviceId,
-        gopToken,
-        language,
-        platform: 3
-      },sessionKey);
-    }
+    ): Promise<{uid: number}> {
+      return v3(
+        'post',
+        'auths/login',
+        {
+          deviceId,
+          gopToken,
+          language,
+          platform: 3,
+        },
+        sessionKey
+      );
+    },
   },
   logout: {
     post(sessionKey: string): Promise<void> {
-      return v3('post', 'auths/logout',{},sessionKey);
-    }
+      return v3('post', 'auths/logout', {}, sessionKey);
+    },
   },
   sessions: {
     post(
       deviceId: string,
-      language: /* UI language */ string,sessionKey: string,
-    ): Promise<{ expiryTime: number }> {
+      language: /* UI language */ string,
+      sessionKey: string
+    ): Promise<{expiryTime: number}> {
       return v3(
         'post',
         'auths/sessions',
         {
           deviceId,
           language,
-          platform: 3
-        },sessionKey,
+          platform: 3,
+        },
+        sessionKey,
         {}
       ).then((res: AxiosResponse) => {
         return res.data;
       });
-    }
-  }
+    },
+  },
 };

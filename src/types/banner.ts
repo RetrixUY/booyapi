@@ -1,5 +1,5 @@
-import { GiftType } from './gift';
-import { AlertBannerTab } from './alertConfig';
+import {GiftType} from './gift';
+import {AlertBannerTab} from './alertConfig';
 
 export type Banner = {
   id: number;
@@ -32,7 +32,7 @@ export interface ChatBanner {
 
 export enum ChatBannerType {
   LuckyDraw = 0,
-  Gift = 1
+  Gift = 1,
 }
 
 export interface ChatCustomBanner {
@@ -56,5 +56,5 @@ export enum ChatCustomBannerType {
   FreeGift = 1,
   CoinGift = 2,
   NewFollower = 3,
-  Hosting = 4
+  Hosting = 4,
 }

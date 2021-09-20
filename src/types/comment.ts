@@ -5,7 +5,7 @@ export interface Attachment {
 
 export enum CommentStatus {
   NORMAL = 0,
-  DELETED = 1
+  DELETED = 1,
 }
 
 export interface BaseComment {
@@ -50,16 +50,16 @@ export const defaultBaseComment: BaseComment = {
   likeCnt: 0,
   replyNextCursor: 0,
   replyCnt: 0,
-  status: CommentStatus.NORMAL
+  status: CommentStatus.NORMAL,
 };
 
 export const defaultComment: Comment = {
   ...defaultBaseComment,
-  replyCommentList: []
+  replyCommentList: [],
 };
 
 export const defaultReplyComment: ReplyComment = {
   ...defaultBaseComment,
   toNickname: '',
-  toUid: 0
+  toUid: 0,
 };

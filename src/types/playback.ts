@@ -1,7 +1,7 @@
-import { Channel } from './channel';
-import { User } from './user';
-import { VideoFilterType } from './video';
-import { ActiveClipCampaign } from './clipCampaign';
+import {Channel} from './channel';
+import {User} from './user';
+import {VideoFilterType} from './video';
+import {ActiveClipCampaign} from './clipCampaign';
 
 export type PlaybackEndpoint = {
   bitrate: number;
@@ -41,7 +41,7 @@ export type PlaybackItem = {
 
 export enum Sort {
   CREATE_TIME_ASC = -1,
-  CREATE_TIME_DESC = 1
+  CREATE_TIME_DESC = 1,
 }
 
 export type PlaybackStats = {
@@ -67,6 +67,5 @@ export const defaultPlayback: Playback = {
   lang: 'en',
   type: VideoFilterType.VOD,
   tagUniqList: [],
-  displayType: 0
+  displayType: 0,
 };
-

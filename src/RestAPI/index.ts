@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * @author RetrixUY <retrixuy@gmail.com>
-*/
+ */
 
 import ApiApps from './api/apps';
 import ApiAuths from './api/auths';
@@ -37,38 +37,38 @@ import ApiUsers from './api/users';
 import v3 from './v3';
 
 export default {
-    getServerTs(): Promise<{serverTs: number}>{
-        return v3('get','server-ts',{},'');
-         },
-    auths: ApiAuths,
-    apps: ApiApps,
-    assets: ApiAssets,
-    callbacks: ApiCallbacks,
-    channels: ApiChannels,
-    chatrooms: ApiChatrooms,
-    clans: ApiClans,
-    clipCampaigns: ApiClipCampaigns,
-    comments: ApiComments,
-    contentLanguages: ApiContentLanguages,
-    feeds: ApiFeeds,
-    ffAccounts: ApiFFAccounts,
-    freeGifts: ApiFreeGifts,
-    games: ApiGames,
-    gameBuilds: ApiGameBuilds,
-    gifts: ApiGifts,
-    guests: ApiGuests,
-    news: ApiNews,
-    playbacks: ApiPlaybacks,
-    protections: ApiProtections,
-    rankings: ApiRankings,
-    report: ApiReports,
-    searches: ApiSearches,
-    stickerPacks: ApiStickerPacks,
-    stickers: ApiStickers,
-    streamEvents: ApiStreamEvents,
-    streamerPrograms: ApiStreamerPrograms,
-    streams: ApiStreams,
-    tags: ApiTags,
-    utils: ApiUtils,
-    users: ApiUsers,
-}
+  getServerTs(): Promise<{serverTs: number}> {
+    return v3('get', 'server-ts', {}, '');
+  },
+  auths: ApiAuths,
+  apps: ApiApps,
+  assets: ApiAssets,
+  callbacks: ApiCallbacks,
+  channels: ApiChannels,
+  chatrooms: ApiChatrooms,
+  clans: ApiClans,
+  clipCampaigns: ApiClipCampaigns,
+  comments: ApiComments,
+  contentLanguages: ApiContentLanguages,
+  feeds: ApiFeeds,
+  ffAccounts: ApiFFAccounts,
+  freeGifts: ApiFreeGifts,
+  games: ApiGames,
+  gameBuilds: ApiGameBuilds,
+  gifts: ApiGifts,
+  guests: ApiGuests,
+  news: ApiNews,
+  playbacks: ApiPlaybacks,
+  protections: ApiProtections,
+  rankings: ApiRankings,
+  report: ApiReports,
+  searches: ApiSearches,
+  stickerPacks: ApiStickerPacks,
+  stickers: ApiStickers,
+  streamEvents: ApiStreamEvents,
+  streamerPrograms: ApiStreamerPrograms,
+  streams: ApiStreams,
+  tags: ApiTags,
+  utils: ApiUtils,
+  users: ApiUsers,
+};

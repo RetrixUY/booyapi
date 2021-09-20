@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { AxiosError } from 'axios';
+import {AxiosError} from 'axios';
 
 export default {
   checkRes403(e: AxiosError, action: 'gotoLogin' | 'xman' = 'gotoLogin') {
@@ -37,9 +37,6 @@ export default {
     //clientLogout();
     // create a new session key from server
     //RestAPI.auths.sessions.post(ClientCache.deviceId, ClientCache.uiLanguage);
-    
   },
-  showBannedAlert(_reason: string, _expiry: number) {
-    
-  }
+  showBannedAlert(_reason: string, _expiry: number) {},
 };
