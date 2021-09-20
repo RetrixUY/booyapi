@@ -32,4 +32,4 @@ export { ClipUploadParam, MuxVideoType, VideoFilterType, VideoFormat, VideoTab, 
 export { AbrConfig, ControllerMode, Mirror, PlayerError, Resolution } from './types/videoPlayer';
 import RestAPI from './RestAPI';
 import ChatClient from './ChatClient';
-export { RestAPI, ChatClient };
+export {RestAPI, ChatClient};

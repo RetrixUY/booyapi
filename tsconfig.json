@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "baseUrl": "./",
     "rootDir": "./src",
