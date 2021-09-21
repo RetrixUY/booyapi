@@ -13,6 +13,7 @@ export type PlaybackEndpoint = {
 export type Playback = {
   channelId: number;
   createTimeMs: number;
+  updateTimeMs: number;
   duration: number;
   name: string;
   description: string;
@@ -52,6 +53,7 @@ export type PlaybackStats = {
 export const defaultPlayback: Playback = {
   channelId: 0,
   createTimeMs: 0,
+  updateTimeMs: 0,
   duration: 0,
   name: '',
   description: '',
