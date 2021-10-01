@@ -184,9 +184,9 @@ type socketGiftReceived = {
     badge_list: [];
     clt_msg_id: string;
     msg_param: {
-      gift_amout: number;
+      gift_amount: number;
       gift_name: string;
-      gift_ticket_amout: number;
+      gift_ticket_amount: number;
       gift_type: number;
       gift_url: string;
       sender_avatar: string;
@@ -246,11 +246,11 @@ function processGift(
 ): GiftReceived {
   const gift: GiftReceived = {
     giftId: message.data.srv_msg_id,
-    coinAmount: message.data.msg_param.gift_amout,
+    coinAmount: message.data.msg_param.gift_amount,
     userAvatar: message.data.msg_param.sender_avatar,
     userNickname: message.data.msg_param.sender_nickname,
     userId: message.data.uid,
-    giftAmount: message.data.msg_param.gift_amout,
+    giftAmount: message.data.msg_param.gift_amount,
     status: GiftStatus.RECEIVED,
     giftType: message.data.msg_param.gift_type,
     channelId: channelId,
