@@ -246,7 +246,7 @@ function processGift(
 ): GiftReceived {
   const gift: GiftReceived = {
     giftId: message.data.srv_msg_id,
-    coinAmount: message.data.msg_param.gift_amount,
+    coinAmount: message.data.msg_param.gift_ticket_amount,
     userAvatar: message.data.msg_param.sender_avatar,
     userNickname: message.data.msg_param.sender_nickname,
     userId: message.data.uid,
