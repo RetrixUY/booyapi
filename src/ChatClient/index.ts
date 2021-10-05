@@ -79,9 +79,6 @@ class ChatClient extends EventEmitter {
 
       messages.forEach(async (message: any) => {
         switch (message.event) {
-          case MsgType.STICKER:
-            console.log(message);
-            break;
           case MsgType.CHAT:
             this.emit(
               'message',
@@ -137,7 +134,7 @@ class ChatClient extends EventEmitter {
   private sendHeartbeat() {
     this.webSocket?.send('{"msg":""}');
   }
-  public sendEmote(emote: string){
+  public sendEmote(emote: number){
     this.webSocket?.send(
       JSON.stringify({
         event: SendMsgType.STICKER,
