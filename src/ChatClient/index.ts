@@ -71,7 +71,7 @@ class ChatClient extends EventEmitter {
 
     this.webSocket.onclose = ev => {
       console.log('Connection lost, reconnecting ', ev.code, ev.reason);
-      //this.connect(this.channel_id);
+      this.connect(this.channelId);
     };
 
     this.webSocket.onmessage = ev => {

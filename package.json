@@ -1,6 +1,6 @@
 {
   "name": "booyapi",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Booyah! RestAPI and Chat Client",
   "main": "es/index.js",
   "types": "es/index.d.ts",
