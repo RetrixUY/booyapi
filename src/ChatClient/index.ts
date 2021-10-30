@@ -21,6 +21,7 @@ declare interface ChatClient {
   on(event: 'message', listener: (msg: ChatMessage) => void): this;
   on(event: 'modAction', listener: (msg: ModAction) => void): this;
   on(event: 'giftReceived', listener: (msg: GiftReceived) => void): this;
+  on(event: 'event',listener: (msg: any)=> void): this;
 }
 
 class ChatClient extends EventEmitter {
@@ -127,6 +128,10 @@ class ChatClient extends EventEmitter {
               'giftReceived',
               processGift(message, this.channelId.toString())
             );
+            break;
+          default:
+            this.emit('event',message);
+            break;
         }
       });
     };
