@@ -37,6 +37,9 @@ export default function v3(
     case 'post':
       params.data = objectToSnake(data);
       break;
+    case 'patch':
+      params.data = objectToSnake(data);
+      break;
     default:
       params.data = JSON.stringify(data);
       break;
