@@ -21,6 +21,7 @@ declare interface ChatClient {
   on(event: 'message', listener: (msg: ChatMessage) => void): this;
   on(event: 'modAction', listener: (msg: ModAction) => void): this;
   on(event: 'giftReceived', listener: (msg: GiftReceived) => void): this;
+  on(event: 'host', listener: (msg: {channelId:string,nickname:string,thumbnail:string})=> void): this;
   on(event: 'event',listener: (msg: any)=> void): this;
 }
 
@@ -129,6 +130,12 @@ class ChatClient extends EventEmitter {
               processGift(message, this.channelId.toString())
             );
             break;
+          case MsgType.NEW_HOSTER:
+              this.emit(
+                'host',
+                processHost(message)
+              );
+              break;
           default:
             this.emit('event',message);
             break;
@@ -216,6 +223,24 @@ type socketGiftReceived = {
   event: number;
 };
 
+type socketHostReceived = {
+  data: {
+    badge_list: [],
+    clt_msg_id: string,
+    msg_param: {
+      channel_Id: string,
+      nickname: string,
+      thumbnail: string
+    },
+    nickname: string,
+    plat: number,
+    srv_msg_id: string,
+    sticker_id: number,
+    uid: string
+  },
+  event: number
+}
+
 function processChatMessage(
   message: socketMessage,
   channelId: string,
@@ -271,8 +296,18 @@ function processGift(
     status: GiftStatus.RECEIVED,
     giftType: message.data.msg_param.gift_type,
     channelId: channelId,
+    giftUrl: message.data.msg_param.gift_url,
     timestamp: new Date().getTime(),
   };
   return gift;
+}
+
+function processHost(message: socketHostReceived): {channelId: string,nickname:string,thumbnail:string}{
+  const host = {
+    channelId: message.data.msg_param.channel_Id,
+    nickname: message.data.msg_param.nickname,
+    thumbnail: message.data.msg_param.thumbnail
+  }
+  return host;
 }
 export default ChatClient;

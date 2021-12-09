@@ -33,6 +33,7 @@ export type GiftReceived = {
   giftId: string;
   giftType: GiftType;
   giftAmount: number;
+  giftUrl: string;
   coinAmount: number;
   userId: string;
   userNickname: string;
