@@ -295,6 +295,7 @@ function processGift(
     giftAmount: message.data.msg_param.gift_amount,
     status: GiftStatus.RECEIVED,
     giftType: message.data.msg_param.gift_type,
+    giftName: message.data.msg_param.gift_name,
     channelId: channelId,
     giftUrl: message.data.msg_param.gift_url,
     timestamp: new Date().getTime(),

@@ -32,6 +32,7 @@ export enum GiftLogOrderType {
 export type GiftReceived = {
   giftId: string;
   giftType: GiftType;
+  giftName: string;
   giftAmount: number;
   giftUrl: string;
   coinAmount: number;
